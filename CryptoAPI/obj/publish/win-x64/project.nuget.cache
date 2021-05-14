@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sooTRMrbmT31Tad/k6Sec9EGxkp3c9pkzfC6R0/i8uN3yLrtpLODIrBXWsPxDZ3Lzu8B/sC/5QFY2n73aPZlcw==",
+  "dgSpecHash": "3zcKxzHCop/GlQ9CRm/8FHvDGarjHXAcU1JImqu1Ilq0cQbyiSZ1huHiF3/2JrA8ufHf3q6th9FBhplIfmLteQ==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Repos\\CryptoAPI shit\\CryptoAPI-Source\\CryptoAPI\\Crypto API.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,10 @@
     "C:\\Users\\LeaperJ\\.nuget\\packages\\sharpcompress\\0.23.0\\sharpcompress.0.23.0.nupkg.sha512",
     "C:\\Users\\LeaperJ\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\LeaperJ\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
-    "C:\\Users\\LeaperJ\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512"
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.15\\microsoft.netcore.app.runtime.win-x64.3.1.15.nupkg.sha512",
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.15\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.15.nupkg.sha512",
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.15\\microsoft.aspnetcore.app.runtime.win-x64.3.1.15.nupkg.sha512"
   ],
   "logs": []
 }

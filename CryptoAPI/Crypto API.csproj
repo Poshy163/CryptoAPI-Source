@@ -5,6 +5,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Crypto_API</RootNamespace>
     <UseWPF>true</UseWPF>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Joshua Leaper</Authors>
+    <Company>Poshy inc.</Company>
+    <Copyright>Copyright @ 2021</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>

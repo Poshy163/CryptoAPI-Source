@@ -66,7 +66,7 @@ namespace ModernUI
             }
             var document = new BsonDocument
             {
-                {"ID", ID},
+                {"ID", ID.ToUpper()},
                 {"PUBLICKEY", pubKey },
                 {"PRIVATEKEY", secretKey },
             };

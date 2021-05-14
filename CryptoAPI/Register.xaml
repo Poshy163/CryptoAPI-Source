@@ -43,24 +43,24 @@
 
             <TextBlock Text="CrytoAPI"
                        Foreground="White"
-                       Grid.Column="0"
-                       VerticalAlignment="Bottom"
+                       VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontFamily="Fonts/#Dosis"
-                       FontWeight="Medium" Margin="11,0,11,5" />
+                       TextAlignment="Center"
+                       FontFamily="Fonts/#Dosi.ttf"
+                       FontWeight="Medium" Width="64" Height="14" />
             <TextBlock Text="Menu"
                        Foreground="LightGray"
                        Grid.Column="1"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontFamily="Fonts/#Dosis" />
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" Width="66" />
             <Button Content="GitHub"
                        Grid.Column="2"
                        FontFamily="Fonts/#Dosis"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                     Click="Website_Button"
-            Foreground="LightGray">
+                    Click="Website_Button"
+            Foreground="LightGray" Width="66">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis" />

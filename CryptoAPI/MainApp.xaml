@@ -17,11 +17,12 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="24*" />
+            <ColumnDefinition Width="25*" />
         </Grid.ColumnDefinitions>
 
         <Grid Background="#0F0F2D"
-              Grid.ColumnSpan="2"
+              Grid.ColumnSpan="3"
               MouseDown="Grid_MouseDown">
 
             <Grid.ColumnDefinitions>
@@ -44,24 +45,24 @@
 
             <TextBlock Text="CrytoAPI"
                        Foreground="White"
-                       Grid.Column="0"
-                       VerticalAlignment="Bottom"
+                       VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontFamily="Fonts/#Dosis"
-                       FontWeight="Medium" Margin="12,0,11,4" />
+                       TextAlignment="Center"
+                       FontFamily="Fonts/#Dosi.ttf"
+                       FontWeight="Medium" Width="64" Height="14" />
             <TextBlock Text="Menu"
                        Foreground="LightGray"
                        Grid.Column="1"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontFamily="Fonts/#Dosis" Margin="19,5,19,4" />
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" Width="66" />
             <Button Content="GitHub"
                        Grid.Column="2"
                        FontFamily="Fonts/#Dosis"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                     Click="Website_Button"
-            Foreground="LightGray" Margin="17,5">
+            Foreground="LightGray" Width="66">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis" />
@@ -160,7 +161,7 @@
         </Grid>
 
         <StackPanel Grid.Row="1"
-                    VerticalAlignment="Top">
+                    VerticalAlignment="Center" Grid.ColumnSpan="2">
 
             <TextBlock Text="Welcome NULL!" Foreground ="White" FontFamily="Fonts/#Dosis"
                        FontWeight="Medium" HorizontalAlignment="Center" FontSize="30"
