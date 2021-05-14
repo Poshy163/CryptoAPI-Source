@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/9YZ27QwFFKrtN3plkotUOusdRiaTiH36/JcIC/SJA5YMnc0TLCg/PHCug1ElLnay84uehcgbGZOctJ0VHuqVg==",
+  "dgSpecHash": "cHZYUEIJN9BzEobT6hjDIwG6T+OZaUPjkea59xXV0WVqtsbgJA8GnGHACXU5FUKuTenUPBGJ9/0B5gp+8/DkfA==",
   "success": true,
-  "projectFilePath": "C:\\GitHub\\Repos\\CryptoAPI shit\\Crypto API Source\\Crypto API.csproj",
+  "projectFilePath": "C:\\GitHub\\Repos\\CryptoAPI shit\\CryptoAPI-Source\\CryptoAPI\\Crypto API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LeaperJ\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\LeaperJ\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

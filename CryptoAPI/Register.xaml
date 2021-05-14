@@ -169,7 +169,7 @@
                            RenderOptions.BitmapScalingMode="Fant" />
                     <TextBlock Text="Register"
                            Foreground="White"
-                           FontSize="20"
+                           FontSize="25"
                            FontWeight="Medium"
                            VerticalAlignment="Center"
                            FontFamily="Fonts/#Dosis"
@@ -197,11 +197,11 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                         Margin="0,15,0,0">
-                <Button Content="Save to database"
+                <Button Content="Register"
                         Foreground="White"
                         FontSize="14"
                         FontWeight="Medium"
-                        Click="SaveToDatabase">
+                        Click="SaveToDatabase" Width="330">
 
                     <Button.Style>
                         <Style TargetType="Button">
@@ -211,37 +211,6 @@
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="Background" Value="#3A3952" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border Width="100" Height="25"
-                                    CornerRadius="12"
-                                    Background="{TemplateBinding Background}">
-                                <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center" />
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-
-                <Button Content="Save locally"
-                        Foreground="White"
-                        FontSize="14"
-                        FontWeight="Medium"
-                        Margin="20,0,0,0"
-                        Click="SaveToLocal">
-
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis" />
-                            <Setter Property="Background" Value="#FE6584" />
-                            <Setter Property="Cursor" Value="Hand" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="#FF4C70" />
                                 </Trigger>
                             </Style.Triggers>
                         </Style>

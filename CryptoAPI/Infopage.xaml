@@ -133,7 +133,7 @@
                            RenderOptions.BitmapScalingMode="Fant" />
                     <TextBlock Text="CryptoAPI beta"
                            Foreground="White"
-                           FontSize="20"
+                           FontSize="25"
                            FontWeight="Medium"
                            VerticalAlignment="Center"
                            FontFamily="Fonts/#Dosis"
@@ -158,7 +158,7 @@
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis" />
 
-                <TextBlock Text="By poshy."
+                <TextBlock Text="By Joshua Leaper."
                        Foreground="White"
                        FontSize="12"
                        FontWeight="Medium"

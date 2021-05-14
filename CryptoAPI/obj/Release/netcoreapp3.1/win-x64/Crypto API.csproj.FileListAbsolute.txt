@@ -1,0 +1,41 @@
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Crypto API.exe
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Images\flame.png
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Images\flat-ui.png
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Images\shuttle.png
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Crypto API.deps.json
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Crypto API.runtimeconfig.json
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Crypto API.runtimeconfig.dev.json
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Crypto API.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Crypto API.pdb
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\DnsClient.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\MongoDB.Bson.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\MongoDB.Driver.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\MongoDB.Driver.Core.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\MongoDB.Libmongocrypt.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Newtonsoft.Json.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\SharpCompress.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\System.Runtime.CompilerServices.Unsafe.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\libzstd.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\snappy32.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\snappy64.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\mongocrypt.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Infopage.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Login.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\MainApp.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Register.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\App.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API_Content.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API_MarkupCompile.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API_MarkupCompile.lref
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Infopage.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Login.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\MainApp.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Register.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.g.resources
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.AssemblyInfoInputs.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.AssemblyInfo.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.csproj.CoreCompileInputs.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.csproj.CopyComplete
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.pdb
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\win-x64\Crypto API.genruntimeconfig.cache

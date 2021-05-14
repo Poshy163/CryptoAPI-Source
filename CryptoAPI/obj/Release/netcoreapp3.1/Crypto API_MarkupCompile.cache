@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\GitHub\Repos\CryptoAPI shit\Crypto API Source\obj\Release\netcoreapp3.1\
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\
 Crypto_API
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-C:\GitHub\Repos\CryptoAPI shit\Crypto API Source\App.xaml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\App.xaml
 4-939989413
-
+3-731320003
 6-1934849996
-193-49885346
+199-131277191
 Infopage.xaml;Login.xaml;MainApp.xaml;Register.xaml;
 
-True
+False
 

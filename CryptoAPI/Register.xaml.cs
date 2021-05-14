@@ -42,29 +42,6 @@ namespace ModernUI
             Close();
         }
 
-        private void SaveToLocal(object sender, RoutedEventArgs e)
-        {
-            string pubKey = PublicKey.Text.Trim(), secretKey = SecretKey.Text.Trim(), ID = IDBox.Text.Trim();
-            if (!IsValid(pubKey, secretKey, ID))
-            {
-                MessageBox.Show("Error");
-                return;
-            }
-
-            if (File.Exists(FilePath))
-            {
-                MessageBox.Show("There is already a local save");
-                return;
-            }
-
-            using (StreamWriter sw = File.CreateText(FilePath))
-            {
-                sw.WriteLine($"{pubKey}:{secretKey}");
-                sw.Close();
-            }
-            ToLogin();
-        }
-
         private void SaveToDatabase(object sender, RoutedEventArgs e)
         {
             string pubKey = PublicKey.Text.Trim(), secretKey = SecretKey.Text.Trim(), ID = IDBox.Text.Trim();

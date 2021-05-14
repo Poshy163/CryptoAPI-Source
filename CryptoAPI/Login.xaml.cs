@@ -55,50 +55,24 @@ namespace ModernUI
             MessageBox.Show($"No User with the ID {ID} found");
         }
 
-        private void LocalLogin(object sender, RoutedEventArgs e)
-        {
-            string ID = IDBox.Text.ToUpper();
-            if (!File.Exists(Register.FilePath))
-            {
-                MessageBox.Show($"No data exists");
-                return;
-            }
-            var str = new StreamReader(Register.FilePath);
-            string[] strRes = str.ReadToEnd().Split(':');
-            str.Close();
-            if (strRes[0] == ID)
-            {
-                MessageBox.Show("Data exists");
-            }
-            else
-            {
-                MessageBox.Show("No data exists");
-            }
-        }
-
         public string ToJson(BsonDocument bson)
         {
-            using (var stream = new MemoryStream())
+            using var stream = new MemoryStream();
+            using (var writer = new BsonBinaryWriter(stream))
             {
-                using (var writer = new BsonBinaryWriter(stream))
-                {
-                    BsonSerializer.Serialize(writer, typeof(BsonDocument), bson);
-                }
-                stream.Seek(0, SeekOrigin.Begin);
-#pragma warning disable CS0618 // Type or member is obsolete
-                using (var reader = new Newtonsoft.Json.Bson.BsonReader(stream))
-#pragma warning restore CS0618 // Type or member is obsolete
-                {
-                    var sb = new StringBuilder();
-                    var sw = new StringWriter(sb);
-                    using (var jWriter = new JsonTextWriter(sw))
-                    {
-                        jWriter.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
-                        jWriter.WriteToken(reader);
-                    }
-                    return sb.ToString();
-                }
+                BsonSerializer.Serialize(writer, typeof(BsonDocument), bson);
             }
+            stream.Seek(0, SeekOrigin.Begin);
+#pragma warning disable CS0618 // Type or member is obsolete
+            using var reader = new Newtonsoft.Json.Bson.BsonReader(stream);
+            var sb = new StringBuilder();
+            var sw = new StringWriter(sb);
+            using (var jWriter = new JsonTextWriter(sw))
+            {
+                jWriter.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
+                jWriter.WriteToken(reader);
+            }
+            return sb.ToString();
         }
 
         private void Exit_Application(object sender, RoutedEventArgs e)
