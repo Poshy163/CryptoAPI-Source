@@ -519,3 +519,4 @@ C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\PresentationNative_cor3.dll
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\vcruntime140_cor3.dll
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\wpfgfx_cor3.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\win-x64\Images\logo.png

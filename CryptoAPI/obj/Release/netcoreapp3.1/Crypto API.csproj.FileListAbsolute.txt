@@ -42,3 +42,4 @@ C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\Crypto API.dll
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\Crypto API.pdb
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Release\netcoreapp3.1\Crypto API.genruntimeconfig.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Release\netcoreapp3.1\Images\logo.png

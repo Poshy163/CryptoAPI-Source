@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Windows.Input;
 using System.IO;
+using Newtonsoft.Json.Linq;
+using System.Windows.Controls;
+using System.Diagnostics;
 
-namespace ModernUI
+namespace CryptoAPI
 {
     public partial class Infopage : Window
     {
@@ -15,20 +18,25 @@ namespace ModernUI
             InitializeComponent();
         }
 
+        public string CurrentVersion = "1.3";
+
         private void CheckForUpdate()
         {
-            bool Update = false;
-            if (Update)
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
+            var json = client.GetAsync("https://api.github.com/repos/Poshy163/CryptoAPI/commits").Result.Content.ReadAsStringAsync().Result;
+            dynamic commits = JArray.Parse(json);
+            string lastCommit = commits[0].commit.message;
+            string LatestRealese = lastCommit.Split("\n")[0].Split(" ")[1];
+
+            if (CurrentVersion != LatestRealese)
             {
                 MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "Update", MessageBoxButton.YesNo);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
-                        System.Diagnostics.Process.Start("https://github.com/Poshy163");
+                        Extra.OpenProcess("https://github.com/Poshy163/CryptoAPI");
                         System.Windows.Application.Current.Shutdown();
-                        break;
-
-                    case MessageBoxResult.No:
                         break;
                 }
             }
@@ -68,7 +76,7 @@ namespace ModernUI
 
         private void Website_Button(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Poshy163");
+            Extra.OpenProcess("https://github.com/Poshy163");
         }
 
         private void Exit_Application(object sender, RoutedEventArgs e)

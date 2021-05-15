@@ -1,0 +1,47 @@
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Crypto API.exe
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Images\flame.png
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Images\flat-ui.png
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Images\logo.png
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Images\shuttle.png
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Crypto API.deps.json
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Crypto API.runtimeconfig.json
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Crypto API.runtimeconfig.dev.json
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Crypto API.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\ref\Crypto API.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Crypto API.pdb
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\DnsClient.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\MongoDB.Bson.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\MongoDB.Driver.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\MongoDB.Driver.Core.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\MongoDB.Libmongocrypt.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\SharpCompress.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\runtimes\win\native\libzstd.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\runtimes\win\native\snappy32.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\runtimes\win\native\snappy64.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\runtimes\linux\native\libmongocrypt.so
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\runtimes\osx\native\libmongocrypt.dylib
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\net5.0-windows\runtimes\win\native\mongocrypt.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.csprojAssemblyReference.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Infopage.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Login.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\MainApp.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Register.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\App.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API_Content.g.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API_MarkupCompile.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API_MarkupCompile.lref
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Infopage.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Login.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\MainApp.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Register.baml
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.g.resources
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.AssemblyInfoInputs.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.AssemblyInfo.cs
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.csproj.CoreCompileInputs.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.csproj.CopyComplete
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\ref\Crypto API.dll
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.pdb
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\net5.0-windows\Crypto API.genruntimeconfig.cache

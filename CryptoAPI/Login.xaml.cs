@@ -8,7 +8,7 @@ using System.IO;
 using MongoDB.Bson.IO;
 using System.Text;
 
-namespace ModernUI
+namespace CryptoAPI
 {
     public partial class Login : Window
     {
@@ -27,7 +27,7 @@ namespace ModernUI
 
         private void Website_Button(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Poshy163");
+            Extra.OpenProcess("https://github.com/Poshy163");
         }
 
         private void DatabaseLogin(object sender, RoutedEventArgs e)

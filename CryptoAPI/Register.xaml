@@ -1,9 +1,9 @@
-﻿<Window x:Class="ModernUI.Register" x:Name="CryptoAPI"
+﻿<Window x:Class="CryptoAPI.Register" x:Name="CryptoAPI"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ModernUI"
+        xmlns:local="clr-namespace:CryptoAPI"
         mc:Ignorable="d"
         Title="CryptoAPI" Height="500" Width="900"
         WindowStyle="None"
@@ -84,7 +84,7 @@
                 </Button.Template>
             </Button>
 
-            <Button Content="x"
+            <Button Content="X"
 
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
@@ -121,7 +121,6 @@
             </Button>
 
             <Button Content="Back"
-
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                         Foreground="White"
@@ -189,7 +188,7 @@
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis" />
                 <TextBox FontFamily="Fonts/#Dosis" x:Name="SecretKey" />
-                <TextBlock Text="Name (Used to look you up)"
+                <TextBlock Text="ID (Used to look you up)"
                        Foreground="White"
                        FontSize="25"
                        FontWeight="Medium"

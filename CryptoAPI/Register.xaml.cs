@@ -8,7 +8,7 @@ using MongoDB.Bson.Serialization;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace ModernUI
+namespace CryptoAPI
 {
     public partial class Register : Window
     {
@@ -19,7 +19,7 @@ namespace ModernUI
 
         private void Website_Button(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Poshy163");
+            Extra.OpenProcess("https://github.com/Poshy163");
         }
 
         public static readonly string FilePath = Directory.GetCurrentDirectory() + @"\SaveInfo.txt";
@@ -115,7 +115,6 @@ namespace ModernUI
 
         private void PageLoaded()
         {
-
         }
     }
 }

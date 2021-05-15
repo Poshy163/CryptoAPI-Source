@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -12,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using Newtonsoft.Json;
 
-namespace ModernUI
+namespace CryptoAPI
 {
     public partial class MainApp : Window
     {
@@ -58,7 +59,7 @@ namespace ModernUI
 
         private void Website_Button(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Poshy163");
+            Extra.OpenProcess("https://github.com/Poshy163");
         }
 
         private void Return(object sender, RoutedEventArgs e)
@@ -388,14 +389,6 @@ namespace ModernUI
         public string FormatResponse()
         {
             return $"{CoinName} | ${CoinPriceAUD}";
-        }
-    }
-
-    public partial struct Extra
-    {
-        public static async Task<BitmapImage> BtnLoadFromFileAsync(string coinName)
-        {
-            return await Task.FromResult(new BitmapImage(new Uri($"https://coinlib.io/static/img/coins/small/{coinName.ToLower()}.png")));
         }
     }
 }
