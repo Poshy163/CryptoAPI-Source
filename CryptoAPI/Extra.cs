@@ -29,8 +29,7 @@ namespace CryptoAPI
         public static string SendSlackMessage(string error)
         {
             string errormessage = DateTime.Now + ": " + error;
-            string URL = "https://hooks.slack.com/services/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";
-            SlackClient client = new SlackClient(URL);
+            SlackClient client = new SlackClient("https://hooks.slack.com/services/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");
             client.PostMessage(username: "CryptoAPI", text: errormessage, channel: "#cryptoapi-errors");
             return "It seems like you encountered a issue. Dont worry though its been reported";
         }

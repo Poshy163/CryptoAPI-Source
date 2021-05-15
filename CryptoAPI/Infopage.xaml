@@ -132,7 +132,7 @@
                     <Image Width="50" Height="50"
                        Source="\Images\shuttle.png"
                            RenderOptions.BitmapScalingMode="Fant" />
-                    <TextBlock Text="CryptoAPI beta"
+                    <TextBlock Text="CryptoAPI alpha"
                            Foreground="White"
                            FontSize="25"
                            FontWeight="Medium"
@@ -199,7 +199,6 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-
                 <Button Content="Register"
                         Foreground="White"
                         FontSize="14"
@@ -207,7 +206,7 @@
                         Click="Register_Button">
 
                     <Button.Style>
-                        <Style TargetType="Button">
+                        <Style TargetType="{x:Type Button}">
                             <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis" />
                             <Setter Property="Background" Value="#39385D" />
                             <Setter Property="Cursor" Value="Hand" />
@@ -219,7 +218,7 @@
                         </Style>
                     </Button.Style>
                     <Button.Template>
-                        <ControlTemplate TargetType="Button">
+                        <ControlTemplate TargetType="{x:Type Button}">
                             <Border Width="100" Height="25"
                                     CornerRadius="12"
                                     Background="{TemplateBinding Background}">
