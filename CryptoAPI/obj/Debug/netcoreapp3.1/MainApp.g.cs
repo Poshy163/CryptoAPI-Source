@@ -173,7 +173,7 @@ namespace ModernUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Crypto API;V1.0.0.0;component/mainapp.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Crypto API;component/mainapp.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainApp.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

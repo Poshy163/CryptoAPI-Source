@@ -112,5 +112,10 @@ namespace ModernUI
             infopage.Show();
             Close();
         }
+
+        private void PageLoaded()
+        {
+
+        }
     }
 }

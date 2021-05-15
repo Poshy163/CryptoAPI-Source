@@ -1,14 +1,15 @@
-﻿<Window x:Class="ModernUI.Infopage"
+﻿<Window x:Name="CryptoAPI" x:Class="ModernUI.Infopage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ModernUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900"
+        Title="CryptoAPI" Height="500" Width="900"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="#181735">
+        Icon="/Images/logo.png"
+        Background="#181735" WindowStartupLocation="CenterScreen" Loaded="PageLoaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
@@ -247,7 +248,7 @@
             <StackPanel Orientation="Horizontal"
                         Margin="-350, 250, -255, -250" Grid.RowSpan="2">
 
-                <StackPanel>
+                <StackPanel x:Name="CryptoAPI1">
                     <Border Width="700"
                             Height="35"
                             Background="#3DDDC2"
