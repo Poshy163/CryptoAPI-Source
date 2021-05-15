@@ -31,7 +31,7 @@ namespace CryptoAPI
 
             if (CurrentVersion != LatestRealese)
             {
-                MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "Update", MessageBoxButton.YesNo);
+                MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "CryptoAPI update", MessageBoxButton.YesNo);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
