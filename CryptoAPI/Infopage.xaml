@@ -153,7 +153,7 @@
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis" />
 
-                <TextBlock Text="Portfolio."
+                <TextBlock Text="Crypto."
                        Foreground="White"
                        FontSize="25"
                        FontWeight="Medium"

@@ -20,7 +20,6 @@
     <None Remove="Images\flat-ui.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\shuttle.png" />
-    <None Remove="LEC-Spring-Split-01.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,10 +41,6 @@
     <Content Include="Images\shuttle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="LEC-Spring-Split-01.jpg" />
   </ItemGroup>
 
 </Project>

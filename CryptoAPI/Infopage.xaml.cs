@@ -17,16 +17,20 @@ namespace ModernUI
 
         private void CheckForUpdate()
         {
-            MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "Update", MessageBoxButton.YesNo);
-            switch (result)
+            bool Update = false;
+            if (Update)
             {
-                case MessageBoxResult.Yes:
-                    System.Diagnostics.Process.Start("https://github.com/Poshy163");
-                    System.Windows.Application.Current.Shutdown();
-                    break;
+                MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "Update", MessageBoxButton.YesNo);
+                switch (result)
+                {
+                    case MessageBoxResult.Yes:
+                        System.Diagnostics.Process.Start("https://github.com/Poshy163");
+                        System.Windows.Application.Current.Shutdown();
+                        break;
 
-                case MessageBoxResult.No:
-                    break;
+                    case MessageBoxResult.No:
+                        break;
+                }
             }
         }
 
@@ -70,10 +74,6 @@ namespace ModernUI
         private void Exit_Application(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
-        }
-
-        private void OnpageLoad()
-        {
         }
 
         private void PageLoaded(object sender, RoutedEventArgs e)
