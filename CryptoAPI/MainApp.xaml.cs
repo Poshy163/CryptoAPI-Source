@@ -273,9 +273,9 @@ namespace CryptoAPI
         private async void LoadTopCoins()
         {
             Dictionary<string, float> localdic = new Dictionary<string, float>();
-            int localloop = 0;
-            int Topx = 5;
+            int localloop = 0, Topx = 5;
             Dictionary<string, CryptoCoin> TopList = new Dictionary<string, CryptoCoin>();
+
             for (int i = 0; i < int.MaxValue; i++)
             {
                 try
@@ -285,8 +285,12 @@ namespace CryptoAPI
                     float coinAmount = AllcoinjsonFile["balances"][i][file[1]]["audbalance"];
                     localdic.Add(info, coinAmount);
                 }
-                catch { break; }
+                catch
+                {
+                    break;
+                }
             }
+
             foreach (KeyValuePair<string, float> author in localdic.OrderByDescending(key => key.Value))
             {
                 if (localloop < Topx)
@@ -296,10 +300,16 @@ namespace CryptoAPI
                 }
                 localloop++;
             }
+
+            #region arrays to assign
+
             TextBlock[] textblocknames = new TextBlock[] { info1, info2, info3, info4, info5 };
             Image[] imagenames = new Image[] { Dynamicpic1, Dynamicpic2, Dynamicpic3, Dynamicpic4, Dynamicpic5 };
             TextBlock[] txt24arr = new TextBlock[] { txt241, txt242, txt243, txt244, txt245 };
             Image[] pic24arr = new Image[] { pic241, pic242, pic243, pic244, pic245 };
+
+            #endregion arrays to assign
+
             for (int i = 0; i < textblocknames.Length; i++)
             {
                 string change24hr = await API.GetIncrease(TopList.ElementAt(i).Key);
@@ -342,13 +352,21 @@ namespace CryptoAPI
             string URL = "https://www.coinspot.com.au/buy/" + coinName.ToLower();
             try
             {
-                string htmlCode = client.DownloadString(URL).Split("flaticon-upload-1")[1].Split("</div>")[0].Split(";")[2];
-                return htmlCode;
+                try
+                {
+                    string htmlCode = client.DownloadString(URL).Split("flaticon-upload-1")[1].Split("</div>")[0].Split(";")[2];
+                    return htmlCode;
+                }
+                catch
+                {
+                    string htmlCode = client.DownloadString(URL).Split("flaticon-download")[1].Split("</div>")[0].Split(";")[2];
+                    return htmlCode;
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                string htmlCode = client.DownloadString(URL).Split("flaticon-download")[1].Split("</div>")[0].Split(";")[2];
-                return htmlCode;
+                Extra.SendSlackMessage(ex.Message);
+                return "ERROR";
             }
         }
 

@@ -7,6 +7,7 @@ using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization;
 using System.Text;
 using Newtonsoft.Json;
+using System;
 
 namespace CryptoAPI
 {
@@ -47,30 +48,37 @@ namespace CryptoAPI
             string pubKey = PublicKey.Text.Trim(), secretKey = SecretKey.Text.Trim(), ID = IDBox.Text.Trim();
             if (!IsValid(pubKey, secretKey, ID))
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error one of these fields is not valid");
                 return;
             }
 
-            var client = new MongoClient("mongodb+srv://APIUSER:mdzJO9cfs4FGoxe3@userdata.1xmw5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-            var database = client.GetDatabase("UserData");
-            var collection = database.GetCollection<BsonDocument>("APIKEYS");
-            var documents = collection.Find(new BsonDocument()).ToList();
-            foreach (BsonDocument doc in documents)
+            try
             {
-                dynamic jsonFile = Newtonsoft.Json.JsonConvert.DeserializeObject(ToJson(doc));
-                if (jsonFile["ID"] == ID)
+                var client = new MongoClient("mongodb+srv://APIUSER:mdzJO9cfs4FGoxe3@userdata.1xmw5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+                var database = client.GetDatabase("UserData");
+                var collection = database.GetCollection<BsonDocument>("APIKEYS");
+                var documents = collection.Find(new BsonDocument()).ToList();
+                foreach (BsonDocument doc in documents)
                 {
-                    MessageBox.Show($"Database already contatins a ID called {ID}");
-                    return;
+                    dynamic jsonFile = Newtonsoft.Json.JsonConvert.DeserializeObject(ToJson(doc));
+                    if (jsonFile["ID"] == ID)
+                    {
+                        MessageBox.Show($"Database already contatins a ID called {ID}");
+                        return;
+                    }
                 }
-            }
-            var document = new BsonDocument
-            {
+                var document = new BsonDocument
+                {
                 {"ID", ID.ToUpper()},
                 {"PUBLICKEY", pubKey },
                 {"PRIVATEKEY", secretKey },
-            };
-            collection.InsertOne(document);
+                };
+                collection.InsertOne(document);
+            }
+            catch (Exception ex)
+            {
+                Extra.SendSlackMessage(ex.Message);
+            }
             ToLogin();
         }
 
