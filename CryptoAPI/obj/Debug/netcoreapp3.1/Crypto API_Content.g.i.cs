@@ -10,7 +10,9 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/flame.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/flat-ui.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/greenup.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/reddown.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/shuttle.png")]
 
 

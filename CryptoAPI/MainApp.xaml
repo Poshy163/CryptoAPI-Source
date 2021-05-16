@@ -320,11 +320,12 @@
         <StackPanel Grid.Column ="2"
                     Grid.Row="1"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Left">
+                    HorizontalAlignment="Left"
+                    x:Name="Statpanel">
 
-            <TextBlock Text="Here is your highest preforming coins!"
+            <TextBlock Text="Here is your highest earning coins!"
                        Foreground ="White" FontFamily="Fonts/#Dosis"
-                       FontWeight="Medium" HorizontalAlignment="Center" FontSize="30"
+                       FontWeight="Medium" HorizontalAlignment="Center" FontSize="25"
                        ></TextBlock>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -339,6 +340,9 @@
                            VerticalAlignment="Center"
                            FontFamily="Fonts/#Dosis"
                                Margin="10,0,0,0" />
+                <Image x:Name ="pic241" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Images/flame.png" Width="35" Height="30"  RenderOptions.BitmapScalingMode="Fant" />
+                <TextBlock Foreground="White" x:Name="txt241"
+                           FontSize="10" Text="99.99%" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center"
@@ -353,6 +357,9 @@
                            VerticalAlignment="Center"
                            FontFamily="Fonts/#Dosis"
                                Margin="10,0,0,0" />
+                <Image x:Name ="pic242" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Images/flame.png" Width="35" Height="30"  RenderOptions.BitmapScalingMode="Fant" />
+                <TextBlock Foreground="White" x:Name="txt242"
+                           FontSize="10" Text="99.99%" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center"
@@ -367,6 +374,9 @@
                            VerticalAlignment="Center"
                            FontFamily="Fonts/#Dosis"
                                Margin="10,0,0,0" />
+                <Image x:Name ="pic243" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Images/flame.png" Width="35" Height="30"  RenderOptions.BitmapScalingMode="Fant" />
+                <TextBlock Foreground="White" x:Name="txt243"
+                           FontSize="10" Text="99.99%" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center"
@@ -381,6 +391,9 @@
                            VerticalAlignment="Center"
                            FontFamily="Fonts/#Dosis"
                                Margin="10,0,0,0" />
+                <Image x:Name ="pic244" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Images/flame.png" Width="35" Height="30"  RenderOptions.BitmapScalingMode="Fant" />
+                <TextBlock Foreground="White" x:Name="txt244"
+                           FontSize="10" Text="99.99%" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Center"
@@ -395,6 +408,9 @@
                            VerticalAlignment="Center"
                            FontFamily="Fonts/#Dosis"
                                Margin="10,0,0,0" />
+                <Image x:Name ="pic245" VerticalAlignment="Center" HorizontalAlignment="Center" Source="Images/flame.png" Width="35" Height="30"  RenderOptions.BitmapScalingMode="Fant" />
+                <TextBlock Foreground="White" x:Name="txt245"
+                           FontSize="10" Text="99.99%" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </StackPanel>
         </StackPanel>
     </Grid>

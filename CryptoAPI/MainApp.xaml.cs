@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography;
@@ -26,6 +28,7 @@ namespace CryptoAPI
             SecretKey = tSecretKey;
             ID = tID;
             InitializeComponent();
+            Statpanel.Opacity = 0;
             WelcomeUser();
         }
 
@@ -295,11 +298,22 @@ namespace CryptoAPI
             }
             TextBlock[] textblocknames = new TextBlock[] { info1, info2, info3, info4, info5 };
             Image[] imagenames = new Image[] { Dynamicpic1, Dynamicpic2, Dynamicpic3, Dynamicpic4, Dynamicpic5 };
+            TextBlock[] txt24arr = new TextBlock[] { txt241, txt242, txt243, txt244, txt245 };
+            Image[] pic24arr = new Image[] { pic241, pic242, pic243, pic244, pic245 };
             for (int i = 0; i < textblocknames.Length; i++)
             {
+                string change24hr = await API.GetIncrease(TopList.ElementAt(i).Key);
+
+                txt24arr[i].Text = change24hr;
+                if (change24hr.Contains("-"))
+                    pic24arr[i].Source = new BitmapImage(new Uri(@"/Images/RedDOWN.png", UriKind.Relative));
+                else
+                    pic24arr[i].Source = new BitmapImage(new Uri(@"/Images/GreenUP.png", UriKind.Relative));
+
                 textblocknames[i].Text = TopList.ElementAt(i).Value.FormatResponse();
                 imagenames[i].Source = await Extra.BtnLoadFromFileAsync(TopList.ElementAt(i).Key);
             }
+            Statpanel.Opacity = 100;
         }
     }
 
@@ -320,6 +334,23 @@ namespace CryptoAPI
             {"Withdrawal", "/my/withdrawals"},
             {"Open Market", "/my/transactions/open"},
         };
+
+        public static WebClient client = new WebClient();
+
+        public static async Task<string> GetIncrease(string coinName)
+        {
+            string URL = "https://www.coinspot.com.au/buy/" + coinName.ToLower();
+            try
+            {
+                string htmlCode = client.DownloadString(URL).Split("flaticon-upload-1")[1].Split("</div>")[0].Split(";")[2];
+                return htmlCode;
+            }
+            catch
+            {
+                string htmlCode = client.DownloadString(URL).Split("flaticon-download")[1].Split("</div>")[0].Split(";")[2];
+                return htmlCode;
+            }
+        }
 
         public static async Task<string> MakeRequest(string url)
         {

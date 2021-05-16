@@ -19,7 +19,9 @@
   <ItemGroup>
     <None Remove="Images\flame.png" />
     <None Remove="Images\flat-ui.png" />
+    <None Remove="Images\GreenUP.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\RedDOWN.png" />
     <None Remove="Images\shuttle.png" />
   </ItemGroup>
 
@@ -36,7 +38,13 @@
     <Content Include="Images\flat-ui.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\GreenUP.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\RedDOWN.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\shuttle.png">
