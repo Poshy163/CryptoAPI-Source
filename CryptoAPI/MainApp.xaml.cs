@@ -345,10 +345,10 @@ namespace CryptoAPI
             {"Open Market", "/my/transactions/open"},
         };
 
-        public static WebClient client = new WebClient();
-
         public static async Task<string> GetIncrease(string coinName)
         {
+            var client = new WebClient();
+
             string URL = "https://www.coinspot.com.au/buy/" + coinName.ToLower();
             try
             {
