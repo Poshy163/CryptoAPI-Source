@@ -18,7 +18,7 @@ namespace CryptoAPI
             InitializeComponent();
         }
 
-        public string CurrentVersion = "1.3";
+        public string CurrentVersion = "1.3.5";
 
         private void CheckForUpdate()
         {
