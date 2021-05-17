@@ -184,7 +184,7 @@
                        FontSize="25"
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis" />
-                <TextBox FontFamily="Fonts/#Dosis" x:Name="IDBox" />
+                <TextBox FontFamily="Fonts/#Dosis" x:Name="IDBox" KeyUp="SpacePressed" />
             </StackPanel>
             <StackPanel Orientation="Horizontal"
                         Margin="0,15,0,0">

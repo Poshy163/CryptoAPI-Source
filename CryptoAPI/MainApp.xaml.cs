@@ -29,7 +29,9 @@ namespace CryptoAPI
             ID = tID;
             InitializeComponent();
             Statpanel.Opacity = 0;
+            DisplayPanel.Opacity = 0;
             WelcomeUser();
+            //here is a big fucking change
         }
 
         private async void WelcomeUser()
@@ -49,7 +51,15 @@ namespace CryptoAPI
                 catch { break; }
             }
             PortTotal.Text = $"You currently own ${Math.Round(CoinsPrice, 2)} in {AmountOfCoins} diffrent coins";
+            DisplayPanel.Opacity = 100;
             LoadTopCoins();
+        }
+
+        public static async Task<bool> CheckServerStatus()
+        {
+            dynamic jsonfile = JsonConvert.DeserializeObject(await API.MakeRequest(API.Root + API.APIlink["Status"]));
+            MessageBox.Show(jsonfile + "");
+            return true;
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -70,11 +80,6 @@ namespace CryptoAPI
             Infopage mainapp = new Infopage();
             mainapp.Show();
             Close();
-        }
-
-        private void MessageBoxShow(string message)
-        {
-            MessageBox.Show(message);
         }
 
         private async void NetProft(object sender, RoutedEventArgs e)
@@ -203,7 +208,7 @@ namespace CryptoAPI
                 }
                 catch { break; }
             }
-            MessageBoxShow($"You have referred {peopleReferred} people. for a total of ${TotalPayment} in BTC");
+            MessageBox.Show($"You have referred {peopleReferred} people. for a total of ${TotalPayment} in BTC");
         }
 
         private async void TotalDepositAmount(object sender, RoutedEventArgs e)
@@ -223,7 +228,7 @@ namespace CryptoAPI
                 }
                 catch { break; }
             }
-            MessageBoxShow($"You have deposited ${DepositAmount}");
+            MessageBox.Show($"You have deposited ${DepositAmount}");
         }
 
         private void SpecKeyDown(object sender, KeyEventArgs e)
@@ -312,26 +317,35 @@ namespace CryptoAPI
 
             for (int i = 0; i < textblocknames.Length; i++)
             {
-                string change24hr = await API.GetIncrease(TopList.ElementAt(i).Key);
+                try
+                {
+                    string change24hr = await API.GetIncrease(TopList.ElementAt(i).Key);
 
-                txt24arr[i].Text = change24hr;
-                if (change24hr.Contains("-"))
-                    pic24arr[i].Source = new BitmapImage(new Uri(@"/Images/RedDOWN.png", UriKind.Relative));
-                else
-                    pic24arr[i].Source = new BitmapImage(new Uri(@"/Images/GreenUP.png", UriKind.Relative));
+                    txt24arr[i].Text = change24hr;
+                    if (change24hr.Contains("-"))
+                        pic24arr[i].Source = new BitmapImage(new Uri(@"/Images/RedDOWN.png", UriKind.Relative));
+                    else
+                        pic24arr[i].Source = new BitmapImage(new Uri(@"/Images/GreenUP.png", UriKind.Relative));
 
-                textblocknames[i].Text = TopList.ElementAt(i).Value.FormatResponse();
-                imagenames[i].Source = await Extra.BtnLoadFromFileAsync(TopList.ElementAt(i).Key);
+                    textblocknames[i].Text = TopList.ElementAt(i).Value.FormatResponse();
+                    imagenames[i].Source = await Extra.BtnLoadFromFileAsync(TopList.ElementAt(i).Key);
+                }
+                catch
+                {
+                    pic24arr[i].Source = null;
+                    txt24arr[i].Text = "";
+                    textblocknames[i].Text = "No coin to display";
+                    imagenames[i].Source = null;
+                }
             }
             Statpanel.Opacity = 100;
         }
-    }
 
-    public partial struct API
-    {
-        public static readonly string Root = $"https://www.coinspot.com.au/api/v2/ro";
+        public partial struct API
+        {
+            public static readonly string Root = $"https://www.coinspot.com.au/api/v2/ro";
 
-        public static Dictionary<string, string> APIlink = new Dictionary<string, string>()
+            public static Dictionary<string, string> APIlink = new Dictionary<string, string>()
         {
             {"Status", "/status"},
             {"Balance", "/my/balance/"},
@@ -345,99 +359,100 @@ namespace CryptoAPI
             {"Open Market", "/my/transactions/open"},
         };
 
-        public static async Task<string> GetIncrease(string coinName)
-        {
-            var client = new WebClient();
+            public static async Task<string> GetIncrease(string coinName)
+            {
+                var client = new WebClient();
 
-            string URL = "https://www.coinspot.com.au/buy/" + coinName.ToLower();
-            try
+                string URL = "https://www.coinspot.com.au/buy/" + coinName.ToLower();
+                try
+                {
+                    try
+                    {
+                        string htmlCode = client.DownloadString(URL).Split("flaticon-upload-1")[1].Split("</div>")[0].Split(";")[2];
+                        return htmlCode;
+                    }
+                    catch
+                    {
+                        string htmlCode = client.DownloadString(URL).Split("flaticon-download")[1].Split("</div>")[0].Split(";")[2];
+                        return htmlCode;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Extra.SendSlackMessage(ex.Message);
+                    return "ERROR";
+                }
+            }
+
+            public static async Task<string> MakeRequest(string url)
             {
                 try
                 {
-                    string htmlCode = client.DownloadString(URL).Split("flaticon-upload-1")[1].Split("</div>")[0].Split(";")[2];
-                    return htmlCode;
+                    long nonce = DateTime.Now.Ticks;
+                    HttpClient client = new HttpClient();
+                    var request = new HttpRequestMessage()
+                    {
+                        RequestUri = new Uri(url),
+                        Method = HttpMethod.Post
+                    };
+                    request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    var hash = new StringBuilder();
+                    string signatureBaseString = "{\"nonce\":\"" + nonce + "\"}";
+                    request.Content = new StringContent(signatureBaseString, Encoding.UTF8, "application/json");
+                    hash.Append(SHA512_ComputeHash(request.Content.ReadAsStringAsync().Result, MainApp.SecretKey));
+                    request.Headers.Add("key", MainApp.PublicKey);
+                    request.Headers.Add("sign", hash.ToString());
+                    HttpResponseMessage response = await client.SendAsync(request);
+                    return response.Content.ReadAsStringAsync().Result;
                 }
-                catch
+                catch (Exception e)
                 {
-                    string htmlCode = client.DownloadString(URL).Split("flaticon-download")[1].Split("</div>")[0].Split(";")[2];
-                    return htmlCode;
+                    MessageBox.Show(e.Message);
+                    return "ERROR";
                 }
             }
-            catch (Exception ex)
-            {
-                Extra.SendSlackMessage(ex.Message);
-                return "ERROR";
-            }
-        }
 
-        public static async Task<string> MakeRequest(string url)
-        {
-            try
+            public static string SHA512_ComputeHash(string text, string secretKey)
             {
-                long nonce = DateTime.Now.Ticks;
-                HttpClient client = new HttpClient();
-                var request = new HttpRequestMessage()
-                {
-                    RequestUri = new Uri(url),
-                    Method = HttpMethod.Post
-                };
-                request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 var hash = new StringBuilder();
-                string signatureBaseString = "{\"nonce\":\"" + nonce + "\"}";
-                request.Content = new StringContent(signatureBaseString, Encoding.UTF8, "application/json");
-                hash.Append(SHA512_ComputeHash(request.Content.ReadAsStringAsync().Result, MainApp.SecretKey));
-                request.Headers.Add("key", MainApp.PublicKey);
-                request.Headers.Add("sign", hash.ToString());
-                HttpResponseMessage response = await client.SendAsync(request);
-                return response.Content.ReadAsStringAsync().Result;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                return "ERROR";
-            }
-        }
-
-        public static string SHA512_ComputeHash(string text, string secretKey)
-        {
-            var hash = new StringBuilder();
-            byte[] secretkeyBytes = Encoding.UTF8.GetBytes(secretKey);
-            byte[] inputBytes = Encoding.UTF8.GetBytes(text);
-            using (var hmac = new HMACSHA512(secretkeyBytes))
-            {
-                byte[] hashValue = hmac.ComputeHash(inputBytes);
-                foreach (var theByte in hashValue)
+                byte[] secretkeyBytes = Encoding.UTF8.GetBytes(secretKey);
+                byte[] inputBytes = Encoding.UTF8.GetBytes(text);
+                using (var hmac = new HMACSHA512(secretkeyBytes))
                 {
-                    hash.Append(theByte.ToString("x2"));
+                    byte[] hashValue = hmac.ComputeHash(inputBytes);
+                    foreach (var theByte in hashValue)
+                    {
+                        hash.Append(theByte.ToString("x2"));
+                    }
                 }
+
+                return hash.ToString();
+            }
+        }
+
+        public class CryptoCoin
+        {
+            public float CoinPriceAUD, CoinAmount, Rate;
+            public string CoinName;
+
+            public CryptoCoin(string jsonFile, float t_CoinPriceAUD)
+            {
+                CoinPriceAUD = t_CoinPriceAUD;
+                GetAddionalInfo(JsonConvert.DeserializeObject(jsonFile));
             }
 
-            return hash.ToString();
-        }
-    }
+            public void GetAddionalInfo(dynamic jsonFile)
+            {
+                string[] file = ((jsonFile).ToString()).Split('"');
+                CoinName = file[1];
+                CoinAmount = jsonFile[CoinName]["balance"];
+                Rate = jsonFile[CoinName]["rate"];
+            }
 
-    public class CryptoCoin
-    {
-        public float CoinPriceAUD, CoinAmount, Rate;
-        public string CoinName;
-
-        public CryptoCoin(string jsonFile, float t_CoinPriceAUD)
-        {
-            CoinPriceAUD = t_CoinPriceAUD;
-            GetAddionalInfo(JsonConvert.DeserializeObject(jsonFile));
-        }
-
-        public void GetAddionalInfo(dynamic jsonFile)
-        {
-            string[] file = ((jsonFile).ToString()).Split('"');
-            CoinName = file[1];
-            CoinAmount = jsonFile[CoinName]["balance"];
-            Rate = jsonFile[CoinName]["rate"];
-        }
-
-        public string FormatResponse()
-        {
-            return $"{CoinName} | ${CoinPriceAUD}";
+            public string FormatResponse()
+            {
+                return $"{CoinName} | ${CoinPriceAUD}";
+            }
         }
     }
 }

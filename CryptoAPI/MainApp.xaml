@@ -10,6 +10,7 @@
         ResizeMode="NoResize"
         Icon="/Images/logo.png"
         Background="#181735" WindowStartupLocation="CenterScreen">
+
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="25" />
@@ -160,7 +161,7 @@
             </Button>
         </Grid>
 
-        <StackPanel Grid.Row="1"
+        <StackPanel Grid.Row="1" x:Name="DisplayPanel"
                     VerticalAlignment="Center" Grid.ColumnSpan="2">
 
             <TextBlock Text="Welcome NULL!" Foreground ="White" FontFamily="Fonts/#Dosis"
@@ -320,7 +321,7 @@
         <StackPanel Grid.Column ="2"
                     Grid.Row="1"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Left"
+                    HorizontalAlignment="Center"
                     x:Name="Statpanel">
 
             <TextBlock Text="Here is your highest earning coins!"

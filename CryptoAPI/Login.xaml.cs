@@ -52,7 +52,7 @@ namespace CryptoAPI
                     return;
                 }
             }
-            MessageBox.Show($"No User with the ID {ID} found");
+            MessageBox.Show($"No User with the ID '{ID}' found");
         }
 
         public string ToJson(BsonDocument bson)
@@ -85,6 +85,12 @@ namespace CryptoAPI
             Infopage infopage = new Infopage();
             infopage.Show();
             Close();
+        }
+
+        private void SpacePressed(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                DatabaseLogin(sender, e);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace CryptoAPI
             InitializeComponent();
         }
 
-        public string CurrentVersion = "1.3.5";
+        public string CurrentVersion = "1.4";
 
         private void CheckForUpdate()
         {
@@ -28,7 +28,6 @@ namespace CryptoAPI
             dynamic commits = JArray.Parse(json);
             string lastCommit = commits[0].commit.message;
             string LatestRealese = lastCommit.Split("\n")[0].Split(" ")[1];
-
             if (CurrentVersion != LatestRealese)
             {
                 MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "CryptoAPI update", MessageBoxButton.YesNo);
@@ -36,7 +35,7 @@ namespace CryptoAPI
                 {
                     case MessageBoxResult.Yes:
                         Extra.OpenProcess("https://github.com/Poshy163/CryptoAPI");
-                        System.Windows.Application.Current.Shutdown();
+                        Application.Current.Shutdown();
                         break;
                 }
             }
@@ -81,7 +80,7 @@ namespace CryptoAPI
 
         private void Exit_Application(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
 
         private void PageLoaded(object sender, RoutedEventArgs e)
