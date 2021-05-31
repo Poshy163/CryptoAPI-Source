@@ -22,23 +22,27 @@ namespace CryptoAPI
 
         private void CheckForUpdate()
         {
-            var client = new HttpClient();
-            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-            var json = client.GetAsync("https://api.github.com/repos/Poshy163/CryptoAPI/commits").Result.Content.ReadAsStringAsync().Result;
-            dynamic commits = JArray.Parse(json);
-            string lastCommit = commits[0].commit.message;
-            string LatestRealese = lastCommit.Split("\n")[0].Split(" ")[1];
-            if (CurrentVersion != LatestRealese)
+            try
             {
-                MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "CryptoAPI update", MessageBoxButton.YesNo);
-                switch (result)
+                var client = new HttpClient();
+                client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
+                var json = client.GetAsync("https://api.github.com/repos/Poshy163/CryptoAPI/commits").Result.Content.ReadAsStringAsync().Result;
+                dynamic commits = JArray.Parse(json);
+                string lastCommit = commits[0].commit.message;
+                string LatestRealese = lastCommit.Split("\n")[0].Split(" ")[1];
+                if (CurrentVersion != LatestRealese)
                 {
-                    case MessageBoxResult.Yes:
-                        Extra.OpenProcess("https://github.com/Poshy163/CryptoAPI");
-                        Application.Current.Shutdown();
-                        break;
+                    MessageBoxResult result = MessageBox.Show("There is a new update, would you like to install it?", "CryptoAPI update", MessageBoxButton.YesNo);
+                    switch (result)
+                    {
+                        case MessageBoxResult.Yes:
+                            Extra.OpenProcess("https://github.com/Poshy163/CryptoAPI");
+                            Application.Current.Shutdown();
+                            break;
+                    }
                 }
             }
+            catch { }
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

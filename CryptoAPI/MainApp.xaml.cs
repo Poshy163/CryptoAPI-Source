@@ -31,28 +31,34 @@ namespace CryptoAPI
             Statpanel.Opacity = 0;
             DisplayPanel.Opacity = 0;
             WelcomeUser();
-            //here is a big fucking change
         }
 
         private async void WelcomeUser()
         {
-            Welcometxt.Text = $"Welcome {ID.ToLowerInvariant()}!";
-            AllcoinjsonFile = JsonConvert.DeserializeObject(await API.MakeRequest(API.Root + API.APIlink["Balances"]));
-            int AmountOfCoins = 0;
-            float CoinsPrice = 0;
-            for (var i = 0; i <= int.MaxValue; i++)
+            try
             {
-                try
+                Welcometxt.Text = $"Welcome {ID.ToLowerInvariant()}!";
+                AllcoinjsonFile = JsonConvert.DeserializeObject(await API.MakeRequest(API.Root + API.APIlink["Balances"]));
+                int AmountOfCoins = 0;
+                float CoinsPrice = 0;
+                for (var i = 0; i <= int.MaxValue; i++)
                 {
-                    string[] file = ((AllcoinjsonFile["balances"][i]).ToString()).Split('"');
-                    CoinsPrice = AllcoinjsonFile["balances"][i][file[1]]["audbalance"] + CoinsPrice;
-                    AmountOfCoins++;
+                    try
+                    {
+                        string[] file = ((AllcoinjsonFile["balances"][i]).ToString()).Split('"');
+                        CoinsPrice = AllcoinjsonFile["balances"][i][file[1]]["audbalance"] + CoinsPrice;
+                        AmountOfCoins++;
+                    }
+                    catch { break; }
                 }
-                catch { break; }
+                PortTotal.Text = $"You currently own ${Math.Round(CoinsPrice, 2)} in {AmountOfCoins} diffrent coins";
+                DisplayPanel.Opacity = 100;
+                LoadTopCoins();
             }
-            PortTotal.Text = $"You currently own ${Math.Round(CoinsPrice, 2)} in {AmountOfCoins} diffrent coins";
-            DisplayPanel.Opacity = 100;
-            LoadTopCoins();
+            catch (Exception ex)
+            {
+                Extra.SendSlackMessage(ex.Message);
+            }
         }
 
         public static async Task<bool> CheckServerStatus()

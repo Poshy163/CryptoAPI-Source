@@ -93,4 +93,20 @@ namespace CryptoAPI
                 DatabaseLogin(sender, e);
         }
     }
+
+    public partial class Security
+    {
+        private void CheckPassword()
+        {
+        }
+
+        private bool CheckDetails()
+        {
+            return false;
+        }
+
+        private void CreatePassword(string password)
+        {
+        }
+    }
 }
