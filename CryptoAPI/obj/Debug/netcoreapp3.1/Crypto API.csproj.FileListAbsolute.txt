@@ -77,7 +77,6 @@ C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\netcoreapp3.
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\netcoreapp3.1\runtimes\linux\native\libmongocrypt.so
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\netcoreapp3.1\runtimes\osx\native\libmongocrypt.dylib
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\bin\Debug\netcoreapp3.1\runtimes\win\native\mongocrypt.dll
-C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\Crypto API.csprojAssemblyReference.cache
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\Infopage.g.cs
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\Login.g.cs
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\MainApp.g.cs
@@ -98,3 +97,4 @@ C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\Crypto API.dll
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\Crypto API.pdb
 C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\Crypto API.genruntimeconfig.cache
+C:\GitHub\Repos\CryptoAPI shit\CryptoAPI-Source\CryptoAPI\obj\Debug\netcoreapp3.1\Crypto API.csproj.AssemblyReference.cache
